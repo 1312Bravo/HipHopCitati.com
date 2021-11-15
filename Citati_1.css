@@ -1,7 +1,7 @@
 body{
     text-align: center;
-    width: 90vw;
     --margin: 20px
+    width: 90vw;
 }
 
 /*****************************************************************************************************************************/
@@ -18,30 +18,25 @@ body{
 /*****************************************************************************************************************************/
 .Navigation{
     margin-bottom: var(--margin);
-    font-size: 200%;
+    width: 80%;
 }
 
 .Navigation .Selected a{
     color:red
 }
 
-.Navigation .Nazaj a{
-    color: rgb(44, 44, 44);
-} 
-
 /*****************************************************************************************************************************/
 
 article{
     margin: auto;
-    width: 60%;
-    font-size: 200%;
+    width: 80%;
 
     text-align: center;
     margin: auto;
 
     display: grid;
     grid-template-columns: 100%; 
-    grid-template-rows: 250px 60px 60px;
+    grid-template-rows: 400px 100px 100px;
     grid-template-areas: 
     "b"
     "m"
