@@ -6,10 +6,10 @@
 }
 
 body{
-    height: 100vh; /*100% of viewport height*/
     background-color: black;
     color: white;
     width: 480px;
+    height: auto:
     margin: auto;
 }
 
