@@ -81,7 +81,7 @@ a:hover{
 
 .Quote .Besedilo{
     margin-bottom: var(--margin);
-    font-size: 90%;
+    font-size: 100%;
 }
 
 .Quote .Avtor{
