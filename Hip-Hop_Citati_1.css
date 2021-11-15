@@ -13,7 +13,7 @@ body{
 
 .Container{
     margin: auto;
-    width: 480px;
+    width: 100%;
     text-align: center;
     justify-content: center;
 }
