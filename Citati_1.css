@@ -1,7 +1,108 @@
 body{
     text-align: center;
+    --margin: 20px
 }
+
+/*****************************************************************************************************************************/
 
 .Header{
     text-align: center;
+}
+
+.Header a:hover{
+    color: white;
+    text-decoration: underline 1px red;
+}
+
+/*****************************************************************************************************************************/
+.Navigation{
+    margin-bottom: var(--margin);
+}
+
+.Navigation .Selected a{
+    color:red
+}
+
+.Navigation .Nazaj a{
+    color: rgb(44, 44, 44);
+} 
+
+/*****************************************************************************************************************************/
+
+article{
+    margin: auto;
+    width: 60%;
+
+    text-align: center;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 100%; 
+    grid-template-rows: 250px 60px 60px;
+    grid-template-areas: 
+    "b"
+    "m"
+    "l";
+
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  
+}
+/*****************************************************************************************************************************************/
+
+.Besedilo{ 
+    grid-area: b;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #9c9a9a;
+}
+
+/*****************************************************************************************************************************************/
+
+.Meta{
+    grid-area: m;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    background: blue;
+}
+
+.Meta .Sim{
+    color:#9c9a9a;
+}
+
+.Meta .Avtor{
+    color: red;
+    font-size: 120%;
+}
+
+.Meta .Pesem{
+    font-size: 100%;
+}
+
+/*****************************************************************************************************************************************/
+
+.Button{
+    grid-area: l;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    background: red;
+}
+
+button{
+    background: green;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 50px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+a button{
+    text-transform: uppercase;
 }
