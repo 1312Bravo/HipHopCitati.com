@@ -4,6 +4,7 @@
 
 .Header{
     text-align: center;
+
 }
 
 .Header a:hover{
@@ -15,10 +16,27 @@
 .Navigation{
     margin-bottom: var(--margin);
     width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 200%;
 }
 
 .Navigation .Selected a{
     color:red
+}
+
+.Navigation li:nth-child(2){
+    border-right: solid 2px #9c9a9a;
+}
+
+/*****************************************************************************************************************************/
+
+.Container{
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    --margin: 20px;
 }
 
 /*****************************************************************************************************************************/
@@ -29,6 +47,7 @@ article{
 
     text-align: center;
     margin: auto;
+    font-size: 150%;
 
     display: grid;
     grid-template-columns: 100%; 
@@ -70,11 +89,11 @@ article{
 
 .Meta .Avtor{
     color: red;
-    font-size: 120%;
+    font-size: 150%;
 }
 
 .Meta .Pesem{
-    font-size: 100%;
+    font-size: 120%;
 }
 
 /*****************************************************************************************************************************************/
