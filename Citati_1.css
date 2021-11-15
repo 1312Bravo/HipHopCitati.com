@@ -1,8 +1,4 @@
-body{
-    text-align: center;
-    --margin: 20px
-    width: 90vw;
-}
+
 
 /*****************************************************************************************************************************/
 
@@ -65,7 +61,7 @@ article{
     justify-content: center;
     align-items: center; 
 
-    background: yellow;
+    background: blue;
 }
 
 .Meta .Sim{
