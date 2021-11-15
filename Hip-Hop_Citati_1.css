@@ -58,6 +58,8 @@ a:hover{
 
 .Header{
     margin: var(--margin) 0;
+    padding-bottom: 20px;
+    border-bottom: #9c9a9a 0.5px solid;
 }
 
 .Header h1{
@@ -73,6 +75,8 @@ a:hover{
 
 .Quote{
     margin-bottom: var(--margin);
+    padding-bottom: 20px;
+    border-bottom: #9c9a9a 0.5px solid;
 }
 
 .Quote .Besedilo{
@@ -94,6 +98,11 @@ a:hover{
 
 /*********************************************************************************************************************************/
 
+.Photo{
+    padding-bottom: -10px;
+    border-bottom: #9c9a9a 0.5px solid;
+}
+
 img{
     width: 70%;
     margin: var(--margin) 0;
@@ -104,6 +113,7 @@ img{
 .Footer{
     width: 70%;
     margin: 0 auto;
+    padding-top: 20px;
 }
 
 .Footer ul{
@@ -118,7 +128,7 @@ img{
 }
 
 .Logo{
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .Footer li{
