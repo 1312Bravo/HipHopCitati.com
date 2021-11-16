@@ -1,45 +1,87 @@
-
-
-/*****************************************************************************************************************************/
-
-.Header{
-    text-align: center;
-
+:root{
+    --margin: 20px;
+    --background-color: #9c9a9a96;
 }
 
-.Header a:hover{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+
+body{
+    background-color: black;
     color: white;
-    text-decoration: underline 1px red;
-}
-
-/*****************************************************************************************************************************/
-.Navigation{
-    margin-bottom: var(--margin);
-    width: 80%;
+    height: auto;
+    width: 90vw;
     margin: auto;
-    margin-bottom: 20px;
-    font-size: 200%;
 }
 
-.Navigation .Selected a{
-    color:red
+/*********************************************************************************************************************************/
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.Navigation li:nth-child(2){
-    border-right: solid 2px #9c9a9a;
+a:hover{
+    color: red;
+    text-decoration: none;
 }
 
-/*****************************************************************************************************************************/
+/*********************************************************************************************************************************/
 
 .Container{
     margin: 20px auto;
     width: 100%;
     text-align: center;
     justify-content: center;
-    --margin: 20px;
+    font-size: 100%;
 }
 
-/*****************************************************************************************************************************/
+/*********************************************************************************************************************************/
+
+.Header{
+    margin: var(--margin) 0;
+    padding-bottom: 20px;
+    border-bottom: #9c9a9a 0.5px solid;
+}
+
+.Header h1{
+    font-weight: lighter;
+}
+
+.Header h1 span{
+    color:red;
+    font-weight: bolder;
+}
+
+/*********************************************************************************************************************************/
+
+.Navigation{
+    width: 70%;
+    margin: 0 auto var(--margin) auto;
+}
+
+.Navigation ul{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 2px;
+}
+
+.Navigation li:nth-child(2){
+    border-right: solid 1.5px #9c9a9a;
+    text-align: center;
+}
+
+.Navigation .Selected a{
+    color:red
+}
+
+/*********************************************************************************************************************************/
 
 article{
     margin: auto;
@@ -47,11 +89,10 @@ article{
 
     text-align: center;
     margin: auto;
-    font-size: 150%;
 
     display: grid;
     grid-template-columns: 100%; 
-    grid-template-rows: 400px 100px 100px;
+    grid-template-rows: 300px 45px 45px;
     grid-template-areas: 
     "b"
     "m"
@@ -60,8 +101,10 @@ article{
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 40px;
-  
+    border: #9c9a9a 2px solid;
+
 }
+
 /*****************************************************************************************************************************************/
 
 .Besedilo{ 
@@ -69,7 +112,7 @@ article{
     display: flex;
     justify-content: center;
     align-items: center; 
-    background: #9c9a9a;
+    background: var(--background-color);
 }
 
 /*****************************************************************************************************************************************/
@@ -79,8 +122,6 @@ article{
     display: flex;
     justify-content: center;
     align-items: center; 
-
-    background: blue;
 }
 
 .Meta .Sim{
@@ -88,12 +129,8 @@ article{
 }
 
 .Meta .Avtor{
-    color: red;
-    font-size: 150%;
-}
-
-.Meta .Pesem{
     font-size: 120%;
+    color: red;
 }
 
 /*****************************************************************************************************************************************/
@@ -103,19 +140,15 @@ article{
     display: flex;
     justify-content: center;
     align-items: center; 
-
-    background: red;
+    padding-bottom: 10px;
 }
 
-button{
-    background: green;
+.Button a{
+    border: var(--background-color);
+    background-color: red;
+    border: white 1px solid;
     border-radius: 20px;
-    color: white;
-    padding: 10px 50px;
-    margin-bottom: 5px;
-    border: none;
-}
-
-a button{
+    padding: 5px 30px;
+    font-size: 90%;
     text-transform: uppercase;
 }

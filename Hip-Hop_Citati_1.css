@@ -39,20 +39,6 @@ a:hover{
     --margin: 20px;
 }
 
-/*********************************************************************************************************************************/
-
-.Navigation{
-    width: 70%;
-    margin: 0 auto;
-}
-
-.Navigation ul{
-    columns: 2;
-}
-
-.Navigation li:nth-child(2){
-    border-right: solid 1.5px #9c9a9a;
-}
 
 /*********************************************************************************************************************************/
 
@@ -99,13 +85,33 @@ a:hover{
 
 /*********************************************************************************************************************************/
 
+.Navigation{
+    width:70%;
+    margin: 0 auto;
+}
+
+.Navigation ul{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 2px;
+}
+
+.Navigation li:nth-child(2){
+    border-right: solid 1.5px #9c9a9a;
+    text-align: center;
+}
+
+
+/*********************************************************************************************************************************/
+
 .Photo{
     padding-bottom: -10px;
     border-bottom: #9c9a9a 0.5px solid;
 }
 
 img{
-    width: 80%;
+    width: 100%;
     margin: var(--margin) 0;
 }
 
