@@ -1,3 +1,9 @@
+:root {
+    --first-color: white;
+    --second-color: #D22B2B;
+    --third-color: #9c9a9a;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,13 +11,19 @@
     list-style-type: none;
 }
 
-body{
+body {
     background-color: black;
+    background-image: radial-gradient(red, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(red, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(red, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+
     color: white;
     height: auto;
     width: 95vw;
     margin: auto;
 }
+
+
 
 /*********************************************************************************************************************************/
 
@@ -20,6 +32,18 @@ a {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.Navigation, .Rnd-Q, .ttl {
+    background: -webkit-linear-gradient(var(--first-color), var(--third-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+    .Navigation a:hover, .ttl a:hover, .Rnd-Q a:hover {
+        background: -webkit-linear-gradient(red, red, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
 /*********************************************************************************************************************************/
 
@@ -35,51 +59,46 @@ a {
 
 /*********************************************************************************************************************************/
 
-.Header{
+.Header {
     margin: var(--margin) 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.ttl {
+    font-size: 28px;
     padding-bottom: 20px;
-    border-bottom: #9c9a9a 0.5px solid;
-}
-
-.Header h1{
-    font-weight: lighter;
-}
-
-.Header h1 span{
-    color:red;
-    font-weight: bolder;
+    border-bottom: 1px solid var(--third-color);
 }
 
 /*********************************************************************************************************************************/
-
-.Quote{
-    margin-bottom: var(--margin);
+/*
+    blockquote {
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+*/
+blockquote {
     padding-bottom: 20px;
-    border-bottom: #9c9a9a 0.5px solid;
+
+    border-bottom: 1px solid var(--third-color);
 }
 
-.Quote .Besedilo{
-    margin-bottom: var(--margin);
+    blockquote .Besedilo {
+        margin-bottom: var(--margin);
+        font-size: 100%;
+    }
+
+.Quote .indexAvtor{
     font-size: 100%;
 }
 
-.Quote .Avtor{
-    font-size: 90%;
-    color: red;
-}
-
-.Quote .Sim{
-    color:#9c9a9a;
-}
-
-.Quote .Pesem{
-    font-size: 80%;
-}
-
 /*********************************************************************************************************************************/
 
-.Navigation{
-    width:70%;
+.Navigation {
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -95,23 +114,30 @@ a {
     text-align: center;
 }
 
+.Rnd-Q {
+    padding: 20px;
+    font-size: 20px;
+}
 
 /*********************************************************************************************************************************/
-
-.Photo{
+.Photo {
+    padding-bottom: 10px;
     padding-bottom: -10px;
     border-bottom: #9c9a9a 0.5px solid;
 }
 
-img{
+img {
     width: 100%;
-    margin: var(--margin) 0;
+    margin: 40px 0 var(--margin) 0;
     border-radius: 10px;
-
     -moz-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
     -webkit-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
     box-shadow: 0 0 15px rgb(182, 177, 177, 0.7);
 }
+
+    img:hover {
+        animation: shake 2s infinite;
+    }
 
 /*********************************************************************************************************************************/
 
@@ -153,6 +179,12 @@ img{
     text-align: center;
 }
 
+.Kvovt {
+    text-align: center;
+    color: var(--third-color);
+    font-size: 16px;
+}
+
 /*********************************************************************************************************************************/
 
 /*Tablica*/
@@ -172,21 +204,28 @@ img{
         width: 70vw;
     }
 
+    blockquote {
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+
+
     .Container{
         font-size: 120%;
         display: grid;
         grid-gap: 3px;  
         grid-template-columns: repeat(8, 1fr); 
-        grid-template-rows: 60px 350px 380px 80px;
+        grid-template-rows: 60px 340px 50px 410px;
         grid-template-areas: 
         ". h h h h h h ." 
         "q q q q q n n ." 
-        "p p p p p p p p" 
-        ". f f f f f f .";
+        ". r r r r r r ."
+        "p p p p p p p p";
     }
 
     a:hover{
-        color: red;
+        color: var(--second-color);
         text-decoration: none;
     }
 
@@ -203,22 +242,17 @@ img{
         border-bottom: none;
     }
 
-    .Quote .Avtor{
-        font-size: 120%;
+    .Rnd-Q {
+        grid-area: r;
+        padding-bottom: 40px;
+        font-size: 24px;
+        border-bottom: 1px solid var(--third-color)
     }
 
-    .Quote .Sim{
-        font-size: 120%;
-    }
 
-    .Quote .Pesem{
-        font-size: 105%;
-    }
-    
-    .Navigation{
+    .Navigation {
         grid-area: n;
         margin: auto;
-    
         display: table;
         text-align: center;
         margin: auto;
@@ -232,37 +266,89 @@ img{
     .Navigation li:nth-child(2){
         border-right: none;
     }
-    
-    .Navigation li a{ /*Zato smo tudi dali li znotraj a, da v izi centriramo. :)*/
-        vertical-align: middle;
-        height: 100%;
-        color: white;
-    }
-    
-    .Navigation li a:hover{
-        color: red;
-    }
 
-    .Photo{
+        .Navigation li a { /*Zato smo tudi dali li znotraj a, da v izi centriramo. :)*/
+            vertical-align: middle;
+            height: 100%;
+            color: white;
+            transition: all .2s ease-in-out;
+        }
+
+            .Navigation li a:hover {
+                color: var(--second-color);
+                transform: scale(1.1);
+            }
+
+    .Photo {
         grid-area: p;
         margin: auto;
         border-bottom: none;
     }
 
-    .Photo img{
-        object-fit: cover;
-        width: 90%;
-        border-radius: 30px;
-        margin-top: 0;
-        margin-bottom: 0;
+        .Photo img {
+            object-fit: cover;
+            width: 90%;
+            border-radius: 30px;
+            margin-top: 0;
+            margin-bottom: 0;
+            -moz-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
+            -webkit-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
+            box-shadow: 0 0 30px rgb(182, 177, 177, 0.7);
+        }
 
-        -moz-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
-        -webkit-box-shadow: 0 0 2px rgb(182, 177, 177, 0.7);
-        box-shadow: 0 0 30px rgb(182, 177, 177, 0.7);
+    .Footer {
+        background: red;
+        grid-area: f;
     }
 
-    .Footer{
-        grid-area: f;
-        
+    .Kvovt {
+        font-size: 18px;
+    }
+
+
+@keyframes shake {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-0.5px, -1px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-1.5px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(1.5px, 1px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.5px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-0.5px, 1px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-1.5px, 0.5px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(1.5px, 0.5px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(0.5px, 1px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0.5px, -1px) rotate(-1deg);
     }
 }
+

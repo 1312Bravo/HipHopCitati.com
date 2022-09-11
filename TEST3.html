@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slo Hip-Hop Ljubav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Citati_1.css" />
+</head>
+
+<body>
+
+    <div class="Container">
+
+        <div class="Header">
+            <p class="ttl">
+                <a href="index.html">
+                    B2 Front Page
+                </a>
+            </p>
+        </div>
+
+        <div class="Navigation">
+            <ul>
+                <li class="Selected"><a href="#">Ljubav</a></li>
+                <li><a href="Motivacija.html">Motivacija</a></li>
+                <li><a href="Biznis.html">Biznis</a></li>
+                <li><a href="Vajb.html">Vajb</a></li>
+                <li><a href="Smeha.html">Smeha</a></li>
+                <li><a href="Misl.html">Misl</a></li>
+            </ul>
+        </div>
+
+
+        <!--Buttons-->
+
+        <div class="actions">
+            <a id="TakeAction">Filter Artist</a>
+            <ul id="actions">
+                <li><button class="btn active" onclick="filterSelection('all')"> Show all</button></li>
+                <li><button class="btn" onclick="filterSelection('Arne1')">Arne1</button></li>
+                <li><button class="btn" onclick="filterSelection('Arne2')">Arne2</button></li>
+            </ul>
+        </div>
+
+        <!--Content-->
+
+        <div class="Content">
+            <main class="Grid">
+
+                <article class="filterDiv Arne1">
+                    <div class="Besedilo">
+                        <p>
+                            bebi je k <br>
+                            povratno svojilni zaimk <br>
+                            ljudje je ne štekajo čist <br>
+                            sam js nism ljudje, a kapiš? <br>
+                            ne js nism ljudje, a kapiš <br>
+                            bebi je k <br>
+                            povratno svojilni zaimk <br>
+                            ljudje je ne štekajo čist <br>
+                            sam js nism ljudje, a kapiš? <br>
+                            ne js nism ljudje, a kapiš <br>
+                        </p>
+                    </div>
+                    <div class="Meta">
+                        <p><span class="Avtor">Arne1</span> <span class="Sim">∼</span> <span class="Pesem">Bebi</span></p>
+                    </div>
+                    <div class="Button"><a href="https://www.youtube.com/watch?v=sMkGzoYlzP0" target="_blank">Poslušaj</a></div>
+                </article>
+
+                <article class="filterDiv Arne2">
+                    <div class="Besedilo">
+                        <p>
+                            bebi je k <br>
+                            povratno svojilni zaimk <br>
+                            ljudje je ne štekajo čist <br>
+                            sam js nism ljudje, a kapiš? <br>
+                            ne js nism ljudje, a kapiš <br>
+                            bebi je k <br>
+                            povratno svojilni zaimk <br>
+                            ljudje je ne štekajo čist <br>
+                            sam js nism ljudje, a kapiš? <br>
+                            ne js nism ljudje, a kapiš <br>
+                        </p>
+                    </div>
+                    <div class="Meta">
+                        <p><span class="Avtor">Arne2</span> <span class="Sim">∼</span> <span class="Pesem">Bebi</span></p>
+                    </div>
+                    <div class="Button"><a href="https://www.youtube.com/watch?v=sMkGzoYlzP0" target="_blank">Poslušaj</a></div>
+                </article>
+
+            </main>
+        </div>
+    </div>
+
+        <!--Script-->
+
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+
+
+
+
+            function myFunction() {
+                // Declare variables
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById('myInput');
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName('li');
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+
+        </script>
+
+
+</body>
+</html>
