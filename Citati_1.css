@@ -2,7 +2,7 @@
     --margin: 20px;
     --background-color: black;
     --first-color: white;
-    --second-color: #D22B2B;
+    --second-color: red;
     --third-color: #9c9a9a;
 }
 
@@ -25,8 +25,6 @@ body {
     height: 100%;
     margin: auto;
 }
-
-
 
 /*********************************************************************************************************************************/
 
@@ -160,6 +158,7 @@ article {
     display: flex;
     justify-content: center;
     align-items: center; 
+    color: var(--third-color);
 }
 
     .Meta .Sim {
@@ -167,11 +166,10 @@ article {
     }
 
     .Meta .Avtor{
-        /*font-size: 120%;*/
-        color: red;
+        color: var(--second-color);
     }
-        .Meta .Avtor .Pesem {
-            font-size: 120%
+        .Meta .Pesem {
+            color: var(--first-color);
         }
 
 /*****************************************************************************************************************************************/
