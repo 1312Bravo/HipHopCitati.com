@@ -275,6 +275,10 @@ ul#actions {
         column-gap: 2px;
     }
 
+    .artistButtons ul li a {
+        border-bottom: 1px solid var(--third-color);
+    }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
